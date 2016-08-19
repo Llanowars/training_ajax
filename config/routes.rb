@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'restaurant#index'
+
+  resources :restaurant, only: [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
