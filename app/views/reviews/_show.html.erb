@@ -1,0 +1,5 @@
+ <div id="review_<%= review.id %>">
+   <p><%= review.content %></p>
+   <p><%= link_to "delete", restaurant_review_path(@restaurant, review), method: :delete, data: {confirm: "are you sure"}, remote: true %></p>
+</div>
+

@@ -1,0 +1,6 @@
+<div>
+  <%= simple_form_for([restaurant, review], remote: true ) do  |f| %>
+    <%= f.input :content %>
+    <%= f.button :submit%>
+  <% end %>
+</div>
