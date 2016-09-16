@@ -20,7 +20,17 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    @review.destroy
+    if @review.destroy
+      respond_to do |format|
+        format.html { redirect_to restaurant_path(@restaurant) }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render 'restaurant/show' }
+        format.js
+      end
+    end  
   end
 
   private 

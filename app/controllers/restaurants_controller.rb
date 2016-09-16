@@ -12,23 +12,23 @@ class RestaurantsController < ApplicationController
     @review = Review.new
   end
 
-  def destroy
-    @restaurant.destroy
-  end
-
-  def new
-  end
-
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to restaurants_path }
+        format.js
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'restaurant/index' }
+        format.js
+      end
     end
   end
-
-  def edit
+  
+  def destroy
+    @restaurant.destroy
   end
 
   def update
