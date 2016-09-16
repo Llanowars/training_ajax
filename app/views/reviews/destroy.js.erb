@@ -1,1 +1,3 @@
 $('#review_<%= @review.id %>').slideUp();
+var new_size = $("<%= j render 'restaurants/size', restaurant: @restaurant %>")
+$('.size').html(new_size);
