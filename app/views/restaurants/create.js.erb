@@ -3,14 +3,14 @@
   $('#new_restaurant').html("<%= j render 'restaurants/form', restaurant: @restaurant %>");
 <% else %>
   // Create a paragraph for the new review. But hide it.
-  var new_restaurant = $("<%= j render 'reviews/show', review: @review %>").hide();
+  var new_restaurant = $("<%= j render 'restaurants/restaurant', restaurant: @restaurant %>").hide();
   // Add it to the DOM, at the end of the existing reviews. It's still hidden.
-  $('#reviews').append(new_review);
+  $('.restaurants_list').append(new_restaurant);
   // Show the new review with an animation!
-  new_review.slideDown();
+  new_restaurant.slideDown();
   // Remove the text from the content textarea.
-  $('#review_content').val('');
-  // Actualiser le nombre de Reviews avec la partial
-  var new_size = $("<%= j render 'restaurants/size', restaurant: @restaurant %>")
-  $('.size').html(new_size);
+  $('#restaurant_name').val('');
+  $('#restaurant_address').val('');
+  $('.btn.btn-default').blur();
+  
 <% end %>
