@@ -8,6 +8,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
+gem 'acts_as_votable'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -16,6 +17,13 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+
+gem 'js-routes', '~> 1.3'
+gem 'react-rails', '~> 1.8'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-classnames'
+end
 
 group :development, :test do
   gem 'binding_of_caller'
