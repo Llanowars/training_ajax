@@ -10,4 +10,7 @@
   new_review.slideDown();
   // Remove the text from the content textarea.
   $('#review_content').val('');
+  // Actualiser le nombre de Reviews avec la partial
+  var new_size = $("<%= j render 'restaurants/size', restaurant: @restaurant %>")
+  $('.size').html(new_size);
 <% end %>
