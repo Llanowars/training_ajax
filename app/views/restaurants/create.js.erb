@@ -7,10 +7,9 @@
   // Add it to the DOM, at the end of the existing reviews. It's still hidden.
   $('.restaurants_list').append(new_restaurant);
   // Show the new review with an animation!
-  new_restaurant.slideDown();
+  new_restaurant.slideDown("slow");
   // Remove the text from the content textarea.
   $('#restaurant_name').val('');
   $('#restaurant_address').val('');
   $('.btn.btn-default').blur();
-  
 <% end %>
