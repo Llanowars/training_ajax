@@ -22,9 +22,8 @@ var RestaurantListItem = React.createClass({
       <div class="product" id="restaurant_<%= restaurant.id %>">
         <div class='product-body'>
           <li class="list-inline" id="restaurant_<%= restaurant.id %>">
-            <%= link_to restaurant.name, restaurant_path(restaurant) %>
-            <p><%= link_to "edit", edit_restaurant_path(restaurant) %></p>
-            <p><%= link_to "delete", restaurant_path(restaurant), method: :delete, remote: true %></p>
+
+           
           </li>
         </div>
       </div>
