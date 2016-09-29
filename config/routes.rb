@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   resources :restaurants do
     resources :reviews, only: [:create, :destroy]
+    member do 
+      post :upvote
+    end
   end
+  
 end

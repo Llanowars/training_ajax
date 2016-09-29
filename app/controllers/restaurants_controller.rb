@@ -38,6 +38,15 @@ class RestaurantsController < ApplicationController
 
   private 
 
+  def upvote
+    @product = Restaurant.find(params[:id])
+    if current_user.voted_for? @product
+      current_user.unvote_for @product
+    else
+      current_user.up_votes @product
+    end
+  end
+
   def restaurant_params
     params.require(:restaurant).permit(:name, :address)
   end

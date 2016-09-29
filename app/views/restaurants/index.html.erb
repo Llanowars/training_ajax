@@ -9,9 +9,11 @@
 
 
 <div>
-  <h1 class="text-center">REACT BABY !</h1>
+  <h1 id="react_h1">React Baby !</h1>
+
   <%= react_component "RestaurantList",
-      render(template: 'restaurants/index.json.jbuilder'),
+      render(template: 'restaurants/restaurants.json.jbuilder'),
       prerender: true %>
+
 </div>
 
