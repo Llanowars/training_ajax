@@ -37,11 +37,11 @@ class RestaurantsController < ApplicationController
   end
 
   def upvote
-    @product = Restaurant.find(params[:id])
-    if current_user.voted_for? @product
-      current_user.unvote_for @product
+    @restaurant = Restaurant.find(params[:id])
+    if current_user.voted_for? @restaurant
+      current_user.unvote_for @restaurant
     else
-      current_user.up_votes @product
+      current_user.up_votes @restaurant
     end
   end
 

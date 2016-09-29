@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   root to: 'restaurants#index'
 
   resources :restaurants do
-    resources :reviews, only: [:create, :destroy]
     member do 
       post :upvote
     end
+    resources :reviews, only: [:create, :destroy]
   end
-  
 end

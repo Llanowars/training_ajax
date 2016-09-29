@@ -28,9 +28,10 @@ var Upvote = React.createClass({
       type: 'POST',
       url: Routes.upvote_restaurant_path(this.props.restaurant.id, { format: 'json' }),
       success: function(data) {
-        thas.setState({ restaurant: data });
+        // console.log(data);
+        that.setState({ restaurant: data });
       }
     });
   }
 
-});
+}); 
