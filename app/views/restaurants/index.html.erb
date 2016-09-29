@@ -5,5 +5,15 @@
   <% end %>
 </ul>
 
-<%= render 'restaurants/form', restaurant: @restaurant %>
+<%= render 'restaurants/form', restaurant: @restaurant %> 
+
+
+<div>
+  <h1 id="react_h1">React Baby !</h1>
+
+  <%= react_component "RestaurantList",
+      render(template: 'restaurants/restaurants.json.jbuilder'),
+      prerender: true %>
+
+</div>
 

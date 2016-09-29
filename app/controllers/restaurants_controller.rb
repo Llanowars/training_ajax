@@ -36,6 +36,16 @@ class RestaurantsController < ApplicationController
     redirect_to restaurant_path(@restaurant)
   end
 
+  def upvote
+    @restaurant = Restaurant.find(params[:id])
+    if current_user.voted_for? @restaurant
+      current_user.unvote_for @restaurant
+    else
+      current_user.up_votes @restaurant
+    end
+  end
+
+
   private 
 
   def restaurant_params
