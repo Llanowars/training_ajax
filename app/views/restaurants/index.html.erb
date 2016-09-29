@@ -5,5 +5,13 @@
   <% end %>
 </ul>
 
-<%= render 'restaurants/form', restaurant: @restaurant %>
+<%= render 'restaurants/form', restaurant: @restaurant %> 
+
+
+<div>
+  <h1 class="text-center">REACT BABY !</h1>
+  <%= react_component "RestaurantList",
+      render(template: 'restaurants/index.json.jbuilder'),
+      prerender: true %>
+</div>
 
