@@ -1,10 +1,14 @@
 
 
 <div class="product" id="restaurant_<%= restaurant.id %>">
-  <div class='product-upvote'>
+  <!-- <div class='product-upvote'>
     <div class="product-arrow"></div>
     <div class='product-count'>95</div>
-  </div>
+  </div> -->
+  <%#= react_component "Upvote",
+      render(template: 'products/index.json.jbuilder'),
+      prerender: true %>
+
   <div class='product-body'>
     <li class="list-inline" id="restaurant_<%= restaurant.id %>">
       <%= link_to restaurant.name, restaurant_path(restaurant) %>
