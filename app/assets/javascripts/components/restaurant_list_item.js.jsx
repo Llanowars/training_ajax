@@ -9,7 +9,11 @@ var RestaurantListItem = React.createClass({
           <div className="product-body">
             <div className="product" id={this.props.restaurant.id}>
               <div className="product-body">
-                <p id={this.props.restaurant.id}>{this.props.restaurant.name}</p>
+                <li className='list-inline'>
+                  <a href={Routes.restaurant_path(this.props.restaurant.id)}>{this.props.restaurant.name}</a>
+                  <a href={Routes.edit_restaurant_path(this.props.restaurant.id)}>edit</a>
+                  {/* <a href={Routes.restaurant_path(this.props.restaurant.id)} data-method="delete">delete</a> */}
+                </li>
               </div>
             </div>
           </div>
