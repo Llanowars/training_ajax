@@ -45,7 +45,6 @@ class RestaurantsController < ApplicationController
     end
   end
 
-
   private 
 
   def restaurant_params
@@ -55,5 +54,4 @@ class RestaurantsController < ApplicationController
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
   end
-  
 end

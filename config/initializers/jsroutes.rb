@@ -5,6 +5,8 @@ JsRoutes.setup do |config|
   #       rake tmp:cache:clear
   #       before restarting your `rails s`.
   config.include = [
-    /^upvote_restaurant$/
+    /^upvote_restaurant$/,
+    /^restaurant$/,
+    /^edit_restaurant$/
   ]
 end
